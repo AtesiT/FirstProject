@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -17,43 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKE-Iw-7Um">
-                                <rect key="frame" x="20" y="432.33333333333337" width="335" height="302.33333333333337"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npf-aE-qJa">
-                                <rect key="frame" x="20" y="109.99999999999997" width="335" height="302.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="94D-Hx-gTR">
+                                <rect key="frame" x="20" y="155" width="335" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYD-1C-4hw">
+                                <rect key="frame" x="112" y="531" width="151" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="UaO-pb-FB6"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="25" minY="10" maxX="25" maxY="10"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Hide greeting">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="greetingButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LtI-S7-kqZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OrT-tL-dOF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UKE-Iw-7Um" firstAttribute="leading" secondItem="OrT-tL-dOF" secondAttribute="leading" constant="20" id="5qi-dm-ICO"/>
-                            <constraint firstItem="UKE-Iw-7Um" firstAttribute="top" secondItem="npf-aE-qJa" secondAttribute="bottom" constant="20" id="AkP-Vq-rBu"/>
-                            <constraint firstItem="OrT-tL-dOF" firstAttribute="bottom" secondItem="UKE-Iw-7Um" secondAttribute="bottom" constant="9.3300000000000001" id="Dah-S4-oCo"/>
-                            <constraint firstItem="npf-aE-qJa" firstAttribute="top" secondItem="OrT-tL-dOF" secondAttribute="top" constant="10" id="Ga5-du-oYa"/>
-                            <constraint firstItem="UKE-Iw-7Um" firstAttribute="height" secondItem="npf-aE-qJa" secondAttribute="height" id="Roo-AH-DCR"/>
-                            <constraint firstItem="OrT-tL-dOF" firstAttribute="trailing" secondItem="npf-aE-qJa" secondAttribute="trailing" constant="20" id="loo-iF-acA"/>
-                            <constraint firstItem="OrT-tL-dOF" firstAttribute="trailing" secondItem="UKE-Iw-7Um" secondAttribute="trailing" constant="20" id="o1b-TG-KvO"/>
-                            <constraint firstItem="npf-aE-qJa" firstAttribute="leading" secondItem="OrT-tL-dOF" secondAttribute="leading" constant="20" id="y9s-5Y-Gcv"/>
+                            <constraint firstItem="OrT-tL-dOF" firstAttribute="bottom" secondItem="cYD-1C-4hw" secondAttribute="bottom" multiplier="4:3" id="Etz-Ls-Eyj"/>
+                            <constraint firstItem="OrT-tL-dOF" firstAttribute="trailing" secondItem="94D-Hx-gTR" secondAttribute="trailing" constant="20" id="Fep-4K-z53"/>
+                            <constraint firstItem="cYD-1C-4hw" firstAttribute="centerX" secondItem="OrT-tL-dOF" secondAttribute="centerX" id="V4I-l8-e8j"/>
+                            <constraint firstItem="94D-Hx-gTR" firstAttribute="top" secondItem="OrT-tL-dOF" secondAttribute="top" constant="55" id="gB1-uw-Esh"/>
+                            <constraint firstItem="94D-Hx-gTR" firstAttribute="leading" secondItem="OrT-tL-dOF" secondAttribute="leading" constant="20" id="iIy-ke-uVc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="cYD-1C-4hw" id="HYj-mN-ip5"/>
+                        <outlet property="greetingLabel" destination="94D-Hx-gTR" id="dY4-pf-n8O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.579710144927539" y="3.3482142857142856"/>
+            <point key="canvasLocation" x="39.200000000000003" y="2.9556650246305418"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
