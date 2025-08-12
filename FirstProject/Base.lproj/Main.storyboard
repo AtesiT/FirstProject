@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -17,41 +17,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="94D-Hx-gTR">
-                                <rect key="frame" x="20" y="155" width="335" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYD-1C-4hw">
-                                <rect key="frame" x="112" y="531" width="151" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="UaO-pb-FB6"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="25" minY="10" maxX="25" maxY="10"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Hide greeting">
-                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYY-Rg-QFq">
+                                <rect key="frame" x="149.66666666666666" y="699.66666666666663" width="75.666666666666657" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="START"/>
                                 <connections>
-                                    <action selector="greetingButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LtI-S7-kqZ"/>
+                                    <action selector="changeColorButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILV-jK-5Jt"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="hAW-59-JGW">
+                                <rect key="frame" x="132.66666666666666" y="135" width="110" height="476"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mV-ds-rNr">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8mV-ds-rNr" secondAttribute="height" multiplier="1:1" id="yfo-vX-mlE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cud-kV-PN5">
+                                        <rect key="frame" x="0.0" y="183" width="110" height="110"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MA3-28-kcG">
+                                        <rect key="frame" x="0.0" y="366" width="110" height="110"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OrT-tL-dOF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OrT-tL-dOF" firstAttribute="bottom" secondItem="cYD-1C-4hw" secondAttribute="bottom" multiplier="4:3" id="Etz-Ls-Eyj"/>
-                            <constraint firstItem="OrT-tL-dOF" firstAttribute="trailing" secondItem="94D-Hx-gTR" secondAttribute="trailing" constant="20" id="Fep-4K-z53"/>
-                            <constraint firstItem="cYD-1C-4hw" firstAttribute="centerX" secondItem="OrT-tL-dOF" secondAttribute="centerX" id="V4I-l8-e8j"/>
-                            <constraint firstItem="94D-Hx-gTR" firstAttribute="top" secondItem="OrT-tL-dOF" secondAttribute="top" constant="55" id="gB1-uw-Esh"/>
-                            <constraint firstItem="94D-Hx-gTR" firstAttribute="leading" secondItem="OrT-tL-dOF" secondAttribute="leading" constant="20" id="iIy-ke-uVc"/>
+                            <constraint firstItem="hAW-59-JGW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BcG-ln-xSd"/>
+                            <constraint firstItem="hAW-59-JGW" firstAttribute="top" secondItem="OrT-tL-dOF" secondAttribute="top" constant="35" id="CY2-g0-lKE"/>
+                            <constraint firstItem="hAW-59-JGW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.586207" id="CfW-Xh-vkr"/>
+                            <constraint firstItem="rYY-Rg-QFq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e59-HN-X5V"/>
+                            <constraint firstItem="OrT-tL-dOF" firstAttribute="bottom" secondItem="rYY-Rg-QFq" secondAttribute="bottom" constant="10" id="eeW-qf-yrS"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greetingButton" destination="cYD-1C-4hw" id="HYj-mN-ip5"/>
-                        <outlet property="greetingLabel" destination="94D-Hx-gTR" id="dY4-pf-n8O"/>
+                        <outlet property="changeColorButton" destination="rYY-Rg-QFq" id="b7y-5a-7wA"/>
+                        <outlet property="greenLight" destination="MA3-28-kcG" id="nOx-oC-scx"/>
+                        <outlet property="redLight" destination="8mV-ds-rNr" id="fDj-qK-N00"/>
+                        <outlet property="yellowLight" destination="cud-kV-PN5" id="QKv-Hi-iyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,8 +72,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
